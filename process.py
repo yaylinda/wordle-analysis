@@ -34,7 +34,7 @@ def main():
             score = score + alphabet_count[letter]
         words_letter_score[word] = score
 
-    words_letter_score_sorted = dict(sorted(words_letter_score.items(), key = lambda item: item[1]))
+    words_letter_score_sorted = dict(sorted(words_letter_score.items(), key = lambda item: -item[1]))
     words_score_csv = []
     for word in words_letter_score_sorted:
         words_score_csv.append({ 'word': word, 'count': words_letter_score_sorted[word] })
